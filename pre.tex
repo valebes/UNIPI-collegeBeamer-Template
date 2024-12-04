@@ -1,0 +1,42 @@
+\documentclass[]{beamer}
+\usepackage[unipi,en]{collegeBeamer}
+\usepackage[]{biblatex}
+\addbibresource{bibliography.bib}
+
+% Font
+\usepackage{nunito} % Default font, but feel free to change it...
+
+% Custom Label
+\newcommand{\ballnumber}[1]{\tikz[baseline=(myanchor.base)] \node[circle,fill=.,inner sep=1pt] (myanchor) {\color{-.}\bfseries\scriptsize #1};}
+
+\definecolor{hrefcol}{RGB}{0, 0, 255} % Example: blue color
+
+% meta-data
+\title{My Beautiful Thesis on HPC}
+\subtitle{Thesis Proposal Defense}
+\author{\href{mailto:author@phd.unipi.it}{Name Surname}}
+\date{\today}
+
+% document body
+\begin{document}
+    % Title Page
+    \maketitle
+
+    \include{sections/introduction}
+    \include{sections/background}   
+    \include{sections/literature}
+    \include{sections/proposal}
+    \include{sections/conclusion}
+
+    % Questions and Answers Slide
+    \QApage
+
+    \begin{frame}[allowframebreaks]{Bibliography}
+        \sloppy
+        \tiny
+        \printbibliography[heading=none]
+    \end{frame}
+
+    \include{sections/appendix}
+
+\end{document}
